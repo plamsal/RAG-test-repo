@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:pro="http://www.liquibase.org/xml/ns/pro">
+    <changeSet author="RAML" id="1ab111ad-57fe-472c-b4ed-ad5c184e70c4">
+        <tagDatabase tag="Sprint01_2025-01-25" />
+    </changeSet>
+    
+        relativeToChangelogFile="true" />
+</databaseChangeLog>
