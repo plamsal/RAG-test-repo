@@ -6,5 +6,6 @@
         <tagDatabase tag="Sprint01_2025-01-25" />
     </changeSet>
     
-        relativeToChangelogFile="true" />
+       <include file="TEST/changelogs/V_APPOINTMENT_OVERVIEW.sql" relativeToChangelogFile="true"/>
+       <include file="TEST/V_APPOINTMENT_OVERVIEW.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>
