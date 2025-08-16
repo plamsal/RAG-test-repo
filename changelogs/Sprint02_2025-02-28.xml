@@ -3,8 +3,8 @@
   <changeSet author="PratikL" id="2231e3fc-ae35-41ac-811a-9bd3b9ab28eb">
     <tagDatabase tag="Sprint108_2025-02-24"/>
   </changeSet>
-   <include file="TEST1/tables/member_appointment.sql" relativeToChangelogFile="true"/>
-   <include file="TEST1/tables/patient_medication.sql" relativeToChangelogFile="true"/>
+   <include file="changelogs/Schema1/tables/member_appointment.sql" relativeToChangelogFile="true"/>
+   <include file="changelogs/Schema1/tables/patient_medication.sql" relativeToChangelogFile="true"/>
  </databaseChangeLog>
  
 
