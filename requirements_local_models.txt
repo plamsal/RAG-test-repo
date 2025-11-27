@@ -1,0 +1,107 @@
+# Requirements for Local Model Implementation
+# Install with: pip install -r requirements_local_models.txt
+
+# Snowflake connector (existing)
+snowflake-connector-python==3.6.0
+snowflake-snowpark-python
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Streamlit for UI
+streamlit>=1.28.0
+
+# Local Embedding Models
+sentence-transformers==2.2.2
+torch>=2.0.0
+
+# Option 1: Ollama (Easiest - Recommended) ⭐
+ollama==0.1.7
+
+# Option 2: HuggingFace Transformers (More control)
+transformers==4.36.0
+accelerate==0.25.0
+bitsandbytes==0.41.3  # For quantization to reduce memory
+
+# Option 3: vLLM (Production deployment - Advanced)
+# vllm==0.2.6  # Uncomment if using vLLM
+
+# Data processing
+pandas==2.1.4
+numpy==1.24.3
+
+# Optional: Model optimization
+# optimum  # ONNX optimization
+# onnxruntime  # Faster inference
+
+# Optional: GPU monitoring
+# nvidia-ml-py3  # Monitor GPU usage
+
+# ==========================================
+# Installation Notes:
+# ==========================================
+
+# 1. For CPU-only (no GPU):
+#    pip install torch --index-url https://download.pytorch.org/whl/cpu
+#    pip install sentence-transformers
+
+# 2. For NVIDIA GPU:
+#    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#    pip install sentence-transformers
+
+# 3. For Apple Silicon (M1/M2/M3):
+#    pip install torch
+#    pip install sentence-transformers
+#    # PyTorch will use Metal acceleration automatically
+
+# 4. Install Ollama separately:
+#    # Download from https://ollama.ai
+#    # Then: ollama pull mistral
+
+# ==========================================
+# Recommended Model Sizes by Hardware:
+# ==========================================
+
+# CPU Only (8GB RAM):
+# - Embeddings: all-MiniLM-L6-v2 (80MB)
+# - LLM: phi-2 via Ollama (slow but works)
+
+# Single GPU (8GB VRAM):
+# - Embeddings: all-mpnet-base-v2 (420MB)
+# - LLM: mistral-7b or phi-3-mini (4-8GB)
+
+# Single GPU (16GB VRAM):
+# - Embeddings: e5-base-v2 (440MB)
+# - LLM: mistral-7b, llama2-7b, or codellama-13b
+
+# Single GPU (24GB VRAM):
+# - Embeddings: e5-large-v2 (1.2GB)
+# - LLM: mistral-medium, llama2-13b, or mixtral-8x7b
+
+# Multi-GPU (2x 24GB):
+# - Any embedding model
+# - LLM: llama2-70b, mixtral-8x22b
+
+# ==========================================
+# Quick Start Commands:
+# ==========================================
+
+# Install core dependencies:
+# pip install -r requirements_local_models.txt
+
+# Download embedding model (happens automatically on first use):
+# python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('intfloat/e5-base-v2')"
+
+# Install and setup Ollama:
+# # 1. Download from https://ollama.ai
+# # 2. Install
+# # 3. Pull a model:
+# ollama pull mistral
+# ollama pull phi3
+# ollama pull llama2
+
+# Test Ollama:
+# ollama run mistral "Hello, how are you?"
+
+# Run the application:
+# streamlit run snowflake_rag_local_models.py
