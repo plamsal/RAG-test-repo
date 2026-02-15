@@ -120,11 +120,9 @@ The JobComparator class is implemented as a stateless utility class with only st
 
 # Assumptions
 
-1. **Cost of living index is always greater than zero** to prevent division by zero errors when calculating adjusted salary and bonus values.
-2. **Monetary values are stored as double** to accommodate decimal precision for salary, bonus, and other compensation amounts.
-3. **The GUI layer handles all user input validation** before passing data to the application logic layer, though backend validation via `validate()` methods provides additional integrity checks.
-4. **Job offers and current job can be compared even if they have different cost of living indices**, as the adjustment formula normalizes these differences.
-
+1. The cost of living index is always positive to avoid division by zero errors during the calculation of adjusted salary and bonus.
+2. The monetary values are of double data type to allow for precision in salary, bonus, etc.
+3. The GUI does all the validation of the input before passing it to the application logic layer, although additional validation is done in the backend through validate methods.
+4. The job offers and current job can be compared even if they have different cost of living indices because the formula normalizes them.
 
 ---
-
