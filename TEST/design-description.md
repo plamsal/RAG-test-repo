@@ -115,6 +115,7 @@ Comparison outputs are encapsulated in a dedicated ComparisonResult class to sep
 
 ### JobComparator Class
 The JobComparator class is implemented as a stateless utility class with only static methods for scoring, ranking, and comparison operations. This follows good practice in object-oriented programming, which separates calculation logic from storage. The statelessness of the class also makes it easier to test the scoring algorithm in isolation. The class does not have any attributes, which aligns with the utility class pattern.
+
 ---
 
 # Assumptions
@@ -123,5 +124,6 @@ The JobComparator class is implemented as a stateless utility class with only st
 2. **Monetary values are stored as double** to accommodate decimal precision for salary, bonus, and other compensation amounts.
 3. **The GUI layer handles all user input validation** before passing data to the application logic layer, though backend validation via `validate()` methods provides additional integrity checks.
 4. **Job offers and current job can be compared even if they have different cost of living indices**, as the adjustment formula normalizes these differences.
+
 
 ---
