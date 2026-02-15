@@ -1,14 +1,17 @@
 <div align="center">
-# Assignment 5: Design Description
-### Job Offer Comparison Application
-** Pratik Lamsal**  
-Georgia Institute of Technology
-CS 6300 - Software Development Process
-February 15, 2026
-****
-</div>
----
 
+**Assignment 5: Design Description**
+
+**Job Offer Comparison Application**
+
+**Pratik Lamsal**  
+Georgia Institute of Technology  
+CS 6300 - Software Development Process  
+February 15, 2026
+
+</div>
+
+---
 ## Requirement 1: Main Menu
 
 When the app is started, the user is presented with the main menu, which allows the user to (1) enter or edit current job details, (2) enter job offers, (3) adjust the comparison settings, or (4) compare job offers (disabled if no job offers were entered yet).
@@ -120,5 +123,6 @@ JobComparator is designed as a stateless utility class containing only static me
 2. **Monetary values are stored as double** to accommodate decimal precision for salary, bonus, and other compensation amounts.
 3. **The GUI layer handles all user input validation** before passing data to the application logic layer, though backend validation via `validate()` methods provides additional integrity checks.
 4. **Job offers and current job can be compared even if they have different cost of living indices**, as the adjustment formula normalizes these differences.
+
 
 ---
