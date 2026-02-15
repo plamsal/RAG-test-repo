@@ -107,13 +107,13 @@ This requirement is not represented in the UML design, as it will be handled ent
 
 # Additional Design Decisions
 
-### Location Class
+Location Class
 Location information (city and state) is encapsulated in a separate class rather than storing these fields directly in the Job class. This improves modularity and helps to make it more maintaianable.
 
-### ComparisonResult Class
+ComparisonResult Class
 Comparison outputs are encapsulated in a dedicated ComparisonResult class to separate the concerns of data calculation (performed by JobComparator) from data presentation (handled by the GUI layer). This class encapsulates both jobs being compared along with their computed scores. The class also allows for retrieval of formatted display information through the methods `getJob1Data()` and `getJob2Data()`.
 
-### JobComparator Class
+JobComparator Class
 The JobComparator class is implemented as a stateless utility class with only static methods for scoring, ranking, and comparison operations. This follows good practice in object-oriented programming, which separates calculation logic from storage. The statelessness of the class also makes it easier to test the scoring algorithm in isolation. The class does not have any attributes, which aligns with the utility class pattern.
 
 ---
@@ -127,3 +127,4 @@ The JobComparator class is implemented as a stateless utility class with only st
 
 
 ---
+
